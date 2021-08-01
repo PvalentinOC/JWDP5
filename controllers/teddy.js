@@ -68,7 +68,8 @@ exports.orderTeddies = (req, res, next) => {
           resolve(teddy);
         }
       ).catch(
-        () => {
+        (e) => {
+          console.log(e);
           reject('Database error!');
         }
       )
